@@ -1,37 +1,30 @@
-const frameCount = 240;
-const canvas = document.getElementById("scrollCanvas");
-const context = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const currentFrame = (index) =>
-  `frames/ezgif-frame-${String(index).padStart(3, '0')}.jpg`;
-
-const images = [];
-const img = new Image();
-img.src = currentFrame(1);
-canvas.width = 1920;
-canvas.height = 1080;
-img.onload = function () {
-  context.drawImage(img, 0, 0);
-};
-
-for (let i = 1; i <= frameCount; i++) {
-  const img = new Image();
-  img.src = currentFrame(i);
-  images.push(img);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  const maxScroll = document.body.scrollHeight - window.innerHeight;
-  const frameIndex = Math.min(
-    frameCount - 1,
-    Math.floor((scrollTop / maxScroll) * frameCount)
-  );
+body {
+  height: 300vh; /* controls scroll length */
+  background: #000;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
 
-  requestAnimationFrame(() => {
-    context.drawImage(images[frameIndex], 0, 0);
-  });
-});
+.animation-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.spacer {
+  height: 50vh;
+}
