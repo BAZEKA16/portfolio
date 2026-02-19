@@ -3,46 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bazeka | ECE Resume Portfolio</title>
+  <title>Scrollable Frame Animation</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Scroll Animation Section -->
-  <section class="animation-section">
-    <canvas id="scrollCanvas"></canvas>
+  <section class="spacer"></section>
+
+  <section class="animation-container">
+    <canvas id="frameCanvas"></canvas>
   </section>
 
-  <!-- Resume Content -->
-  <section class="resume-section">
-    <h1>Bazeka Thasleen M</h1>
-    <h2>Electronics and Communication Engineering</h2>
-    <p>CGPA: 7.98</p>
-
-    <h3>Projects</h3>
-    <ul>
-      <li>Industrial Automation using PLC</li>
-      <li>Garbage Segregation System</li>
-      <li>Water Level Indicator</li>
-    </ul>
-
-    <h3>Internships</h3>
-    <ul>
-      <li>LinkedIn</li>
-      <li>Google</li>
-      <li>Microsoft</li>
-    </ul>
-  </section>
-
-  <!-- Chatbot Widget -->
-  <div class="chatbot-container">
-    <div class="chat-header">Resume AI Assistant</div>
-    <div class="chat-body" id="chatBody"></div>
-    <div class="chat-input">
-      <input type="text" id="userInput" placeholder="Ask about my resume..." />
-      <button onclick="sendMessage()">Send</button>
-    </div>
-  </div>
+  <section class="spacer"></section>
 
   <script src="script.js"></script>
 </body>
