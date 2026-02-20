@@ -1,21 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scrollable Frame Animation</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bazeka Thasleen | ECE Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#f1f5f9;
+    overflow-x:hidden;
+}
+
+/* ===== Scroll Animation Canvas ===== */
+#animation-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index:-1;
+    pointer-events:none;
+}
+
+#animation-canvas{
+    width:100%;
+    height:100%;
+    opacity:0.08; /* watermark transparency */
+}
+
+/* ===== Main Content ===== */
+.container{
+    width:85%;
+    max-width:1100px;
+    margin:auto;
+    padding:120px 0;
+}
+
+section{
+    margin-bottom:100px;
+}
+
+h1{
+    font-size:42px;
+    font-weight:700;
+}
+
+h2{
+    font-size:28px;
+    margin-bottom:20px;
+    border-left:4px solid #38bdf8;
+    padding-left:12px;
+}
+
+h3{
+    font-size:18px;
+    font-weight:600;
+    margin-top:10px;
+}
+
+p{
+    line-height:1.8;
+    margin-top:10px;
+    color:#cbd5e1;
+}
+
+ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+    color:#cbd5e1;
+}
+
+/* Card Styling */
+.card{
+    background:rgba(15,23,42,0.8);
+    backdrop-filter:blur(6px);
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:20px;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+/* Header */
+.header{
+    text-align:center;
+    margin-bottom:100px;
+}
+
+.header p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+/* Contact */
+.contact-info p{
+    margin-bottom:8px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    h1{font-size:32px;}
+    h2{font-size:22px;}
+}
+</style>
 </head>
+
 <body>
 
-  <section class="spacer"></section>
+<!-- Scroll Animation Background -->
+<div id="animation-container">
+    <canvas id="animation-canvas"></canvas>
+</div>
 
-  <section class="animation-container">
-    <canvas id="frameCanvas"></canvas>
-  </section>
+<div class="container">
 
-  <section class="spacer"></section>
+    <div class="header">
+        <h1>BAZEKA THASLEEN</h1>
+        <p>Aspiring Electronics & Communication Engineer | Industrial Automation & Embedded Systems Enthusiast</p>
+        <p>Tamil Nadu, India | +91 XXXXX XXXXX | bazeka.thasleen@email.com</p>
+        <p>linkedin.com/in/bazekathasleen</p>
+    </div>
 
-  <script src="script.js"></script>
+    <section>
+        <h2>Career Objective</h2>
+        <div class="card">
+            <p>
+                Aspiring Electronics & Communication Engineer and 3rd-year B.E. ECE student with strong
+                foundation in Industrial Automation, PLC Programming, Embedded Systems, and Circuit Design.
+                Seeking opportunity in a core electronics or automation-driven organization to contribute
+                technical expertise and grow professionally.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="card">
+            <h3>B.E. Electronics & Communication Engineering (2023 – 2027)</h3>
+            <p>Government College of Engineering, Tirunelveli | CGPA: 7.98</p>
+
+            <h3>Higher Secondary (2023)</h3>
+            <p>Sacred Heart Hr. Sec. School, Panagudi | 554/600</p>
+
+            <h3>SSLC (2021)</h3>
+            <p>Sacred Heart Hr. Sec. School, Panagudi | 490/500</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="card">
+            <ul>
+                <li>PLC Programming & Ladder Logic</li>
+                <li>Industrial Automation</li>
+                <li>Embedded Systems & Microcontrollers</li>
+                <li>Circuit Design & Sensor Interfacing</li>
+                <li>Arduino & Hardware Prototyping</li>
+                <li>Troubleshooting & System Optimization</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <div class="card">
+            <h3>Industrial Automation using PLC</h3>
+            <p>Designed automation system using PLC to control multi-stage industrial process,
+               improving efficiency by 30%.</p>
+
+            <h3>Garbage Segregation System</h3>
+            <p>Developed sensor-based automated waste segregation system using moisture
+               and proximity sensors with microcontroller integration.</p>
+
+            <h3>Bill Level Indicator</h3>
+            <p>Designed real-time level monitoring system using sensor interfacing and
+               custom circuitry for accurate measurement.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Soft Skills</h2>
+        <div class="card">
+            <ul>
+                <li>Problem Solving</li>
+                <li>Teamwork</li>
+                <li>Effective Communication</li>
+                <li>Quick Learner</li>
+                <li>Adaptability</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Achievements</h2>
+        <div class="card">
+            <ul>
+                <li>Maintained CGPA of 7.98 in B.E. ECE program</li>
+                <li>Scored 490/500 in SSLC (10th Grade)</li>
+                <li>Scored 554/600 in HSC (12th Grade)</li>
+                <li>Completed industry-focused internships</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<script>
+// ===== Scroll Frame Animation =====
+
+const frameCount = 240;
+const canvas = document.getElementById("animation-canvas");
+const context = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const currentFrame = index => 
+  `frames/ezgif-frame-${String(index).padStart(3, '0')}.jpg`;
+
+const images = [];
+let img = new Image();
+img.src = currentFrame(1);
+
+for (let i = 1; i <= frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
+    images.push(img);
+}
+
+function render() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(img, 0, 0, canvas.width, canvas.height);
+}
+
+img.onload = render;
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const scrollFraction = scrollTop / maxScroll;
+    const frameIndex = Math.min(
+        frameCount - 1,
+        Math.ceil(scrollFraction * frameCount)
+    );
+
+    img = images[frameIndex];
+    requestAnimationFrame(render);
+});
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script>
+
 </body>
 </html>
